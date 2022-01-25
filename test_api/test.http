@@ -1,1 +1,34 @@
-GET http://localhost:8000/api/hello
+# testing the API
+
+
+# register an user
+POST http://localhost:8000/api/register
+X-Requested-With: XMLHttpRequest
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="first_name"
+Content-Type: text/plain
+
+Simone
+--WebAppBoundary
+Content-Disposition: form-data; name="last_name"
+Content-Type: text/plain
+
+Celia
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+simone.celia@simonecelia.it
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+pass
+--WebAppBoundary
+Content-Disposition: form-data; name="password_confirm"
+Content-Type: text/plain
+
+pass
+--WebAppBoundary
