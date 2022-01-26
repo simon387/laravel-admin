@@ -17,3 +17,4 @@ lazygit.bat
 
 storage/dbdata
 .gradle
+package-lock.json
