@@ -13,10 +13,10 @@ Abbiamo modificato la tabella user e cancellato le altre
 + ```docker-compose exec backend sh```
 + dentro docker```php artisan migrate```
 ## to create a controller
-run dentro docker run ```php artisan make:controller AuthController```
++ dentro docker run ```php artisan make:controller AuthController```
 ## to create a RegisterRequest
-+ docker-compose exec backend sh
-+ php artisan make:request RegisterRequest
++ ```docker-compose exec backend sh```
++ ```php artisan make:request RegisterRequest```
 
 ## Links
 + https://www.udemy.com/course/react-laravel-admin/learn/lecture/24288058#overview
