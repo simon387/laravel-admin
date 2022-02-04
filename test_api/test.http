@@ -61,7 +61,7 @@ X-Requested-With: XMLHttpRequest
 Cookie: Authorization=3|pKpl09u3Bk4PMOeigisvOs3frpuQyqAtW3Jg3CdT;
 
 ### get all users
-GET {{api}}users
+GET {{api}}users?page=1
 
 ### create an user
 POST {{api}}users

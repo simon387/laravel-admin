@@ -43,6 +43,7 @@ Serve per non farti mostrare errori inutili dall'ide
 
 ## Comandi utili
 + ```php artisan route:list``` -> mostra tutte le rotte
++ ```php artisan db:seed``` -> crea dati mock
 
 ## Links
 
