@@ -28,6 +28,12 @@ Abbiamo modificato la tabella user e cancellato le altre
 + ```docker-compose exec backend sh```
 + ```php artisan make:request RegisterRequest```
 
+## Laravel Sanctum
++ si usa per login, tokens, ecc
++ ```docker-compose exec backend sh``` e ```composer require laravel/sanctum```
++ ```php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"```
++ ```php artisan migrate```
+
 ## Links
 
 + https://www.udemy.com/course/react-laravel-admin/learn/lecture/24288058#overview
