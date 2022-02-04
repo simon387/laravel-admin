@@ -55,3 +55,7 @@ GET {{api}}user
 X-Requested-With: XMLHttpRequest
 Cookie: Authorization=3|pKpl09u3Bk4PMOeigisvOs3frpuQyqAtW3Jg3CdT;
 
+### logout
+POST {{api}}logout
+X-Requested-With: XMLHttpRequest
+Cookie: Authorization=3|pKpl09u3Bk4PMOeigisvOs3frpuQyqAtW3Jg3CdT;
