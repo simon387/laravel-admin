@@ -2,7 +2,7 @@
 
 
 ### register an user
-POST http://localhost:8000/api/register
+POST {{api}}register
 X-Requested-With: XMLHttpRequest
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
@@ -34,7 +34,7 @@ pass
 --WebAppBoundary
 
 ### login
-POST http://localhost:8000/api/login
+POST {{api}}login
 X-Requested-With: XMLHttpRequest
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
@@ -49,3 +49,9 @@ Content-Type: text/plain
 
 pass
 --WebAppBoundary
+
+### get authenticated user
+GET {{api}}user
+X-Requested-With: XMLHttpRequest
+Authorization: Bearer 2|8jya1PykDmJxsUt5M4rB1qpKvDFQuvDDkS0C75U6
+
