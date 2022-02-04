@@ -34,6 +34,12 @@ Abbiamo modificato la tabella user e cancellato le altre
 + ```php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"```
 + ```php artisan migrate```
 
+## Laravel ide helper
+Serve per non farti mostrare errori inutili dall'ide
++ si installa con ```composer require --dev barryvdh/laravel-ide-helper```
++ poi ```php artisan ide:generate```
++ e ```php artisan ide:models``` e ```yes```
+
 ## Links
 
 + https://www.udemy.com/course/react-laravel-admin/learn/lecture/24288058#overview
