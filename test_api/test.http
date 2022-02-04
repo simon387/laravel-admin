@@ -59,3 +59,40 @@ Cookie: Authorization=3|pKpl09u3Bk4PMOeigisvOs3frpuQyqAtW3Jg3CdT;
 POST {{api}}logout
 X-Requested-With: XMLHttpRequest
 Cookie: Authorization=3|pKpl09u3Bk4PMOeigisvOs3frpuQyqAtW3Jg3CdT;
+
+### get all users
+GET {{api}}users
+
+### create an user
+POST {{api}}users
+X-Requested-With: XMLHttpRequest
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="first_name"
+Content-Type: text/plain
+
+primo nome
+--WebAppBoundary
+Content-Disposition: form-data; name="last_name"
+Content-Type: text/plain
+
+cognome
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+email@provider.it
+--WebAppBoundary
+
+### get an user by id
+GET {{api}}users/6
+
+### update an user by id
+PUT {{api}}users/6
+Content-Type: application/x-www-form-urlencoded
+
+first_name=mod&last_name=cognomeMod&email=email@mod.it
+
+### delete an user by id
+DELETE {{api}}users/6
