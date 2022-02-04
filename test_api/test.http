@@ -50,8 +50,8 @@ Content-Type: text/plain
 pass
 --WebAppBoundary
 
-### get authenticated user
+### get authenticated user (with cookie from the login call)
 GET {{api}}user
 X-Requested-With: XMLHttpRequest
-Authorization: Bearer 2|8jya1PykDmJxsUt5M4rB1qpKvDFQuvDDkS0C75U6
+Cookie: Authorization=3|pKpl09u3Bk4PMOeigisvOs3frpuQyqAtW3Jg3CdT;
 
