@@ -22,6 +22,7 @@ Abbiamo modificato la tabella user e cancellato le altre
 ## to create a controller
 
 + dentro docker run ```php artisan make:controller AuthController```
++ oppure ```php artisan make:controller UserController --api``` con ```--api``` crea roba in più.
 
 ## to create a RegisterRequest
 
@@ -39,6 +40,9 @@ Serve per non farti mostrare errori inutili dall'ide
 + si installa con ```composer require --dev barryvdh/laravel-ide-helper```
 + poi ```php artisan ide:generate```
 + e ```php artisan ide:models``` e ```yes```
+
+## Comandi utili
++ ```php artisan route:list``` -> mostra tutte le rotte
 
 ## Links
 
