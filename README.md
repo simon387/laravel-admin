@@ -12,36 +12,50 @@
 + new ```docker-compose.yml```
 + ```docker-compose up```
 
-## db
+## Database
 
 Abbiamo modificato la tabella user e cancellato le altre
 
 + ```docker-compose exec backend sh```
 + dentro docker```php artisan migrate```
 
-## to create a controller
+## Per creare un controller
 
 + dentro docker run ```php artisan make:controller AuthController```
 + oppure ```php artisan make:controller UserController --api``` con ```--api``` crea roba in più.
 
-## to create a RegisterRequest
+## How to create a RegisterRequest
 
 + ```docker-compose exec backend sh```
 + ```php artisan make:request RegisterRequest```
 
 ## Laravel Sanctum
+
 + si usa per login, tokens, ecc
 + ```docker-compose exec backend sh``` e ```composer require laravel/sanctum```
 + ```php artisan vendor:publish --provider="Laravel\Sanctum\SanctumServiceProvider"```
 + ```php artisan migrate```
 
 ## Laravel ide helper
+
 Serve per non farti mostrare errori inutili dall'ide
+
 + si installa con ```composer require --dev barryvdh/laravel-ide-helper```
 + poi ```php artisan ide:generate```
 + e ```php artisan ide:models``` e ```yes```
 
+## Creazione nuova tabella ruoli e permessi
+1. ```php artisan make:migration create_roles_table```
+2. ```php artisan make:migration create_permissions_table```
+3. ```php artisan migrate```
+4. ```php artisan make:model Role```
+5. ```php artisan make:model Permission```
+6. ```php artisan ide:models``` YES
+7. ```php artisan make:controller PermissionController```
+8```php artisan make:controller RoleController```
+
 ## Comandi utili
+
 + ```php artisan route:list``` -> mostra tutte le rotte
 + ```php artisan db:seed``` -> crea dati mock
 
