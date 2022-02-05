@@ -42,12 +42,12 @@ Content-Type: multipart/form-data; boundary=WebAppBoundary
 Content-Disposition: form-data; name="email"
 Content-Type: text/plain
 
-simone.celia@simonecelia.it
+admin@admin.com
 --WebAppBoundary
 Content-Disposition: form-data; name="password"
 Content-Type: text/plain
 
-pass
+password
 --WebAppBoundary
 
 ### get authenticated user (with cookie from the login call)
@@ -86,7 +86,7 @@ email@provider.it
 --WebAppBoundary
 
 ### get an user by id
-GET {{api}}users/6
+GET {{api}}users/1
 
 ### update an user by id
 PUT {{api}}users/6
