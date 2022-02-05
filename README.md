@@ -63,6 +63,10 @@ Serve per non farti mostrare errori inutili dall'ide
 3. runnare ancora ```php artisan migrate```
 4. se non funzionare ```php artisan migrate:fresh```
 
+## Creazione http resources
++ servono per customizzare i campi mostrati al front end
++ ```php artisan make:resource UserResource```
+
 ## Comandi utili
 
 + ```php artisan route:list``` -> mostra tutte le rotte
