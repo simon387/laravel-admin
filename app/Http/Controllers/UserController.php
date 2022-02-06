@@ -14,7 +14,7 @@ class UserController extends Controller
 {
 	public function index(): AnonymousResourceCollection
 	{
-		return UserResource::collection(User::paginate());
+		return UserResource::collection(User::with('role')->paginate());
 	}
 
 	//per creare questa richiesta specifica -> php artisan make:request UserCreateRequest
@@ -30,7 +30,7 @@ class UserController extends Controller
 
 	public function show($id): UserResource
 	{
-		return new UserResource(User::find($id));
+		return new UserResource(User::with('role')->find($id));
 	}
 
 	public function update(UserUpdateRequest $request, $id)
