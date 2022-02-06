@@ -109,4 +109,8 @@ Content-Type: application/x-www-form-urlencoded
 
 password=pass&password_confirm=pass
 
-###
+### get all the roles
+GET {{api}}roles
+
+### detail on single role
+GET {{api}}roles/1
