@@ -2,15 +2,18 @@
 
 namespace App\Http\Resources;
 
+use Illuminate\Contracts\Support\Arrayable;
+use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use JsonSerializable;
 
 class UserResource extends JsonResource
 {
 	/**
 	 * Transform the resource into an array.
 	 *
-	 * @param \Illuminate\Http\Request $request
-	 * @return array|\Illuminate\Contracts\Support\Arrayable|\JsonSerializable
+	 * @param Request $request
+	 * @return array|Arrayable|JsonSerializable
 	 *
 	 * creato con php artisan make:resource UserResource
 	 */
@@ -19,7 +22,9 @@ class UserResource extends JsonResource
 		return [
 			'id' => $this->id,
 			'first_name' => $this->first_name,
-			'last_name' => $this->last_name,1.26
+			'last_name' => $this->last_name,
+			'email' => $this->email,
+			'role' => $this->role,
 		];
 	}
 }

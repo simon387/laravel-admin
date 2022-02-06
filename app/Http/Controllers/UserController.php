@@ -4,41 +4,42 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\UserCreateRequest;
 use App\Http\Requests\UserUpdateRequest;
+use App\Http\Resources\UserResource;
 use App\Models\User;
-use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use Illuminate\Http\Resources\Json\AnonymousResourceCollection;
 use Illuminate\Support\Facades\Hash;
 use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends Controller
 {
-	public function index(): LengthAwarePaginator
+	public function index(): AnonymousResourceCollection
 	{
-		return User::with('role')->paginate();
+		return UserResource::collection(User::paginate());
 	}
 
 	//per creare questa richiesta specifica -> php artisan make:request UserCreateRequest
 	public function store(UserCreateRequest $request)
 	{
 		$user = User::create(
-			$request->only('first_name', 'last_name', 'email')
+			$request->only('first_name', 'last_name', 'email', 'role_id')
 			+ ['password' => Hash::make(1234)]
 		);
 
-		return response($user, Response::HTTP_CREATED);
+		return response(new UserResource($user), Response::HTTP_CREATED);
 	}
 
-	public function show($id)
+	public function show($id): UserResource
 	{
-		return User::with('role')->find($id);
+		return new UserResource(User::find($id));
 	}
 
 	public function update(UserUpdateRequest $request, $id)
 	{
 		$user = User::find($id);
 
-		$user->update($request->only('first_name', 'last_name', 'email'));
+		$user->update($request->only('first_name', 'last_name', 'email', 'role_id'));
 
-		return \response($user, Response::HTTP_ACCEPTED);
+		return \response(new UserResource($user), Response::HTTP_ACCEPTED);
 	}
 
 	public function destroy($id)
