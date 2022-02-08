@@ -114,3 +114,21 @@ GET {{api}}roles
 
 ### detail on single role
 GET {{api}}roles/1
+
+### create a role
+POST {{api}}roles
+Content-Type: application/json
+
+{
+	"name": "test",
+	"permissions": [1, 2, 3]
+}
+
+### update a role
+PUT {{api}}roles/4
+Content-Type: application/json
+
+{
+	"name": "test",
+	"permissions": [1, 3]
+}
