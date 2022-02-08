@@ -68,16 +68,22 @@ Serve per non farti mostrare errori inutili dall'ide
 + servono per customizzare i campi mostrati al front end
 + ```php artisan make:resource UserResource```
 
+## Esempio creazione seeder
+
+```php artisan make:seeder PermissionSeeder```
+
 ## Comandi utili
 
 + ```php artisan route:list``` -> mostra tutte le rotte
 + ```php artisan db:seed``` -> crea dati mock
++ ```php artisan db:seed --class=PermissionSeeder``` -> crea dati mock solo da quella classe
 
 ## Commons errors
 
 + ```Docker-compose up : Error while fetching server API version: ('Connection aborted.', ConnectionRefusedError(61, 'Connection refused'))```
   soluzione: ```sudo gpasswd -a $USER docker``` e ```newgrp docker```
 + se da connection error dentro laraval, probabilmente manca il file ```.env```, riporto esempio di dev
++ ```Add [name] to fillable property to allow mass assignment on [App\Models\Role].``` -> soluzione: aggiungere questo alla classe modello: ```protected $guarded = [];```
 
 ```
 APP_NAME=Laravel
