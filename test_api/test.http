@@ -160,3 +160,18 @@ Content-Type: application/json
 	"image": "image new",
 	"price": 42
 }
+
+### upload an image
+POST {{api}}upload
+Content-Type: multipart/form-data; boundary=boundary
+
+--boundary
+Content-Disposition: form-data; name="image"; filename="simonecelia.png"
+
+// The 'input.txt' file will be uploaded
+< /dev/laravel-admin/test_api/simonecelia.png
+--boundary
+
+### get the uploaded image
+GET http://localhost:8000/images/ep5Jy27aEZ.png
+
