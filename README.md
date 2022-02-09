@@ -70,7 +70,25 @@ Serve per non farti mostrare errori inutili dall'ide
 
 ## Esempio creazione seeder
 
-```php artisan make:seeder PermissionSeeder```
++ ```php artisan make:seeder PermissionSeeder```
++ i Seeder servono a riempire il db con dati di iniziali e/o di esempio, chiamando i relativi Factory
+
+## Creazione tabella prodotti
+
++ ```php artisan make:migration create_products_table```
++ ```php artisan make:model Product```
++ ```php artisan make:controller ProductController```
++ ```php artisan make:resource ProductResource```
++ ```php artisan ide:models``` yes
++ ```php artisan make:seeder ProductSeeder```
++ ```php artisan make:factory ProductFactory```
++ modifichiamo tutte le classi create
++ ```php artisan migrate```
++ ```php artisan db:seed --class=ProductSeeder```
+
+## Factory
+
+I Factory servono per instanziare model con dati di default, o mock random
 
 ## Comandi utili
 

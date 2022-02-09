@@ -42,6 +42,9 @@ use Laravel\Sanctum\PersonalAccessToken;
  * @method static Builder|User wherePassword($value)
  * @method static Builder|User whereUpdatedAt($value)
  * @mixin Eloquent
+ * @property int $role_id
+ * @property-read \App\Models\Role $role
+ * @method static Builder|User whereRoleId($value)
  */
 class User extends Authenticatable
 {

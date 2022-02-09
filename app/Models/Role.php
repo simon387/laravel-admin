@@ -20,6 +20,11 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static Builder|Role whereId($value)
  * @method static Builder|Role whereName($value)
  * @mixin Eloquent
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\Permission[] $permissions
+ * @property-read int|null $permissions_count
+ * @property-read \Illuminate\Database\Eloquent\Collection|\App\Models\User[] $users
+ * @property-read int|null $users_count
+ * @method static \Database\Factories\RoleFactory factory(...$parameters)
  */
 class Role extends Model
 {
