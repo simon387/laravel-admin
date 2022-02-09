@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PermissionController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -34,5 +35,6 @@ Route::middleware('auth:sanctum')->group(function () {
 	// i 5 metodi sopra possono essere anche scritti con un metodo solo:
 	Route::apiResource('users', UserController::class);
 	Route::apiResource('roles', RoleController::class);
-	Route::get('permissions', [PermissionController::class], 'index');
+	Route::apiResource('products', ProductController::class);
+	Route::get('permissions', [PermissionController::class, 'index']);
 });
