@@ -100,6 +100,11 @@ I Gate li usiamo per le autorizzazioni delle api
 + ```php artisan db:seed``` -> crea dati mock
 + ```php artisan db:seed --class=PermissionSeeder``` -> crea dati mock solo da quella classe
 
+## React
+
+```npx create-react-app react-admin --template typescript```
+```npm start```
+
 ## Commons errors
 
 + ```Docker-compose up : Error while fetching server API version: ('Connection aborted.', ConnectionRefusedError(61, 'Connection refused'))```
