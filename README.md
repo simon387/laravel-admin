@@ -1,6 +1,6 @@
 # Laravel-admin
 
-E-commerce con Laravel e React
+E-commerce in Laravel + React + mysql + docker
 
 ## Project creation commands and artisan serve
 
