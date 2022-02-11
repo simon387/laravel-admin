@@ -172,3 +172,4 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ## Links
 
 + https://www.udemy.com/course/react-laravel-admin/learn/lecture/24288058#overview
++ ho usato la 5.1 come versione di bootstrap al posto del 5.0 https://getbootstrap.com/docs/5.1/examples/dashboard/
