@@ -45,4 +45,5 @@ Route::middleware('auth:sanctum')->group(function () {
 	//oppure è uguale a:
 	Route::apiResource('orders', OrderController::class)->only('index', 'show');
 	Route::post('export', [OrderController::class, 'export']);
+	Route::get('chart', [OrderController::class, 'chart']);
 });

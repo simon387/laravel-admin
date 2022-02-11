@@ -183,3 +183,7 @@ GET {{api}}orders/1
 
 ### export to csv
 POST {{api}}export
+
+### get the chart data
+GET {{api}}chart
+
