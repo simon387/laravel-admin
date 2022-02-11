@@ -173,10 +173,13 @@ Content-Disposition: form-data; name="image"; filename="simonecelia.png"
 --boundary
 
 ### get the uploaded image
-GET http://localhost:8000/images/ep5Jy27aEZ.png
+GET {{localhost}}images/ep5Jy27aEZ.png
 
 ### get the orders
 GET {{api}}orders
 
 ### get a single order
 GET {{api}}orders/1
+
+### export to csv
+POST {{api}}export

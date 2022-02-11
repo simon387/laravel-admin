@@ -44,4 +44,5 @@ Route::middleware('auth:sanctum')->group(function () {
 //	Route::post('orders/{id}', [OrderController::class, 'show']);
 	//oppure è uguale a:
 	Route::apiResource('orders', OrderController::class)->only('index', 'show');
+	Route::post('export', [OrderController::class, 'export']);
 });
