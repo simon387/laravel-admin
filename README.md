@@ -1,5 +1,7 @@
 # Laravel-admin
 
+E-commerce con Laravel e React
+
 ## Project creation commands and artisan serve
 
 + ```composer create-project --prefer-dist laravel/laravel laravel-admin```
@@ -94,7 +96,7 @@ I Factory servono per instanziare model con dati di default, o mock random
 
 I Gate li usiamo per le autorizzazioni delle api
 
-## Comandi utili
+## Comandi utili php artisan
 
 + ```php artisan route:list``` -> mostra tutte le rotte
 + ```php artisan db:seed``` -> crea dati mock
@@ -102,8 +104,8 @@ I Gate li usiamo per le autorizzazioni delle api
 
 ## React
 
-```npx create-react-app react-admin --template typescript```
-```npm start```
++ ```npx create-react-app react-admin --template typescript```
++ ```npm start```
 
 ## Commons errors
 
