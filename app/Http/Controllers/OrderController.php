@@ -9,6 +9,8 @@ class OrderController extends Controller
 {
 	public function index()
 	{
+		$this->authorize('view', 'users');
+
 		$orders = Order::with('orderItems')->paginate();
 
 		return OrderResource::collection($orders);
@@ -16,6 +18,8 @@ class OrderController extends Controller
 
 	public function show($id)
 	{
+		$this->authorize('view', 'users');
+
 		$order = Order::with('orderItems')->find($id);
 
 		return new OrderResource($order);

@@ -90,6 +90,10 @@ Serve per non farti mostrare errori inutili dall'ide
 
 I Factory servono per instanziare model con dati di default, o mock random
 
+## Gate
+
+I Gate li usiamo per le autorizzazioni delle api
+
 ## Comandi utili
 
 + ```php artisan route:list``` -> mostra tutte le rotte

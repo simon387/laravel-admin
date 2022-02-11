@@ -14,12 +14,16 @@ class UserController extends Controller
 {
 	public function index(): AnonymousResourceCollection
 	{
+		\Gate::authorize('view', 'users');
+
 		return UserResource::collection(User::with('role')->paginate());
 	}
 
 	//per creare questa richiesta specifica -> php artisan make:request UserCreateRequest
 	public function store(UserCreateRequest $request)
 	{
+		\Gate::authorize('edit', 'users');
+
 		$user = User::create(
 			$request->only('first_name', 'last_name', 'email', 'role_id')
 			+ ['password' => Hash::make(1234)]
@@ -30,11 +34,15 @@ class UserController extends Controller
 
 	public function show($id): UserResource
 	{
+		\Gate::authorize('view', 'users');
+
 		return new UserResource(User::with('role')->find($id));
 	}
 
 	public function update(UserUpdateRequest $request, $id)
 	{
+		\Gate::authorize('edit', 'users');
+
 		$user = User::find($id);
 
 		$user->update($request->only('first_name', 'last_name', 'email', 'role_id'));
