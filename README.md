@@ -106,6 +106,9 @@ I Gate li usiamo per le autorizzazioni delle api
 
 + ```npx create-react-app react-admin --template typescript```
 + ```npm start```
++ ```npm i react-router-dom @types/react-router-dom```
++ Risolvere un po' di conflitti con ```sudo npm i -g npm-check-updates``` e ```npm fund``` e ```ncu -u``` e npm i```
+
 
 ## Commons errors
 
