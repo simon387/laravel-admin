@@ -1,5 +1,5 @@
 import React from "react";
-import Wrapper from "../Wrapper";
+import Wrapper from "../components/Wrapper";
 
 const Dashboard = () => {
 	return (
