@@ -20,7 +20,7 @@ class Register extends Component {
 			password_confirm: this.password_confirm,
 		});
 
-
+		console.log(response);
 	}
 
 	render() {
