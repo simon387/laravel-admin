@@ -108,7 +108,7 @@ I Gate li usiamo per le autorizzazioni delle api
 + ```npm start```
 + ```npm i react-router-dom @types/react-router-dom```
 + Risolvere un po' di conflitti con ```sudo npm i -g npm-check-updates``` e ```npm fund``` e ```ncu -u``` e npm i```
-
++ ```npm i axios @types/axios```
 
 ## Commons errors
 
