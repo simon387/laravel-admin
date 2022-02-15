@@ -110,6 +110,10 @@ I Gate li usiamo per le autorizzazioni delle api
 + Risolvere un po' di conflitti con ```sudo npm i -g npm-check-updates``` e ```npm fund``` e ```ncu -u``` e npm i```
 + ```npm i axios @types/axios```
 
+### React more info
+
++ il componente ```Redirect``` sarà sostituito da ```Navigate```
+
 ## Commons errors
 
 + ```Docker-compose up : Error while fetching server API version: ('Connection aborted.', ConnectionRefusedError(61, 'Connection refused'))```

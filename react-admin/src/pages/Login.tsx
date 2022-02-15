@@ -1,6 +1,6 @@
 import React, {SyntheticEvent, useState} from "react";
 import axios from "axios";
-import {Navigate} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 
 const Login = () => {
 	const [email, setEmail] = useState('');
@@ -19,7 +19,7 @@ const Login = () => {
 	}
 
 	if (redirect) {
-		return <Navigate to={'/'}/>
+		return <Redirect to={'/'}/>
 	}
 	return (
 		<main className="form-signin">

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import Nav from "./Nav";
 import Menu from "./Menu";
 import axios from "axios";
-import {Navigate} from "react-router-dom";
+import {Redirect} from "react-router-dom";
 
 const Wrapper = (props: any) => {
 	const [redirect, setRedirect] = useState(false);
@@ -19,7 +19,7 @@ const Wrapper = (props: any) => {
 	}, []);
 
 	if (redirect) {
-		return <Navigate to="/login"/>
+		return <Redirect to="/login"/>
 	}
 
 	return (
