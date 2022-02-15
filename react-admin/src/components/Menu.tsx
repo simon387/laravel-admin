@@ -8,7 +8,7 @@ const Menu = () => {
 			<div className="position-sticky pt-3">
 				<ul className="nav flex-column">
 					<li className="nav-item">
-						<NavLink to={'/'} className="nav-link">
+						<NavLink to={'/'} exact className="nav-link">
 							Dashboard
 						</NavLink>
 					</li>

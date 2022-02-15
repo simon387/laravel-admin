@@ -20,7 +20,7 @@ const Users = () => {
 	}, [page]);//ogni volta cambia sta variabile will call useEffect again
 
 	const next = () => {
-		if (page <= lastPage) {
+		if (page < lastPage) {
 			setPage(page + 1);
 		}
 	}
