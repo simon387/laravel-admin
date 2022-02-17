@@ -27,6 +27,10 @@ const Roles = () => {
 
 	return (
 		<Wrapper>
+			<div className="pt-3 pb-2 mb-3 border-bottom">
+				<Link to="/roles/create" className="btn btn-sm btn-outline-secondary">Add</Link>
+			</div>
+
 			<div className="table-responsive">
 				<table className="table table-striped table-sm">
 					<thead>
@@ -43,7 +47,8 @@ const Roles = () => {
 								<td>{role.name}</td>
 								<td>
 									<div className="btn-group mr-2">
-										<Link to={`/roles/${role.id}/edit`} className="btn btn-sm btn-outline-secondary">Edit</Link>
+										<Link to={`/roles/${role.id}/edit`}
+											  className="btn btn-sm btn-outline-secondary">Edit</Link>
 										<a href="#" className="btn btn-sm btn-outline-secondary"
 										   onClick={() => del(role.id)}>Delete</a>
 									</div>
