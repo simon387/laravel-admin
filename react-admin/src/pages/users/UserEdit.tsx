@@ -10,7 +10,7 @@ const UserEdit = (props: any) => {
 	const [email, setEmail] = useState('');
 	const [role_id, setRoleId] = useState('');
 	const [roles, setRoles] = useState([]);
-	const [redirect, setReirect] = useState(false);
+	const [redirect, setRedirect] = useState(false);
 
 	useEffect(() => {
 		(
@@ -18,7 +18,6 @@ const UserEdit = (props: any) => {
 				const response = await axios.get('roles');
 
 				setRoles(response.data);
-
 
 				const {data} = await axios.get(`users/${props.match.params.id}`);
 
@@ -40,7 +39,7 @@ const UserEdit = (props: any) => {
 			role_id,
 		});
 
-		setReirect(true);
+		setRedirect(true);
 	}
 
 	if (redirect) {
