@@ -64,7 +64,7 @@ const RoleCreate = () => {
 										   value={p.id}
 										   onChange={() => check(p.id)}
 									/>
-									<label className="form-check-input">{p.name}</label>
+									<label className="form-check-label">{p.name}</label>
 								</div>
 							);
 						})}
