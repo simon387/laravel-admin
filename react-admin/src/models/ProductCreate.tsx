@@ -2,6 +2,7 @@ import React, {SyntheticEvent, useState} from "react";
 import Wrapper from "../components/Wrapper";
 import axios from "axios";
 import {Redirect} from "react-router-dom";
+import ImageUpload from "../components/ImageUpload";
 
 const ProductCreate = () => {
 	const [title, setTitle] = useState('');
@@ -40,7 +41,12 @@ const ProductCreate = () => {
 				</div>
 				<div className="mb-3">
 					<label>Image</label>
-					<input className="form-control" onChange={e => setImage(e.target.value)}/>
+					<div className="input-group">
+						<input className="form-control"
+							   value={image}
+							   onChange={e => setImage(e.target.value)}/>
+						<ImageUpload uploaded={setImage}/>
+					</div>
 				</div>
 				<div className="mb-3">
 					<label>Price</label>
