@@ -15,7 +15,7 @@ const Roles = () => {
 				setRoles(data);
 			}
 		)();
-	});
+	}, []);
 
 	const del = async (id: number) => {
 		if (window.confirm('Are you sure you want to delete this record?')) {
