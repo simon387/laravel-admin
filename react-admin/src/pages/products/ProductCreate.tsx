@@ -1,8 +1,8 @@
 import React, {SyntheticEvent, useState} from "react";
-import Wrapper from "../components/Wrapper";
 import axios from "axios";
 import {Redirect} from "react-router-dom";
-import ImageUpload from "../components/ImageUpload";
+import Wrapper from "../../components/Wrapper";
+import ImageUpload from "../../components/ImageUpload";
 
 const ProductCreate = () => {
 	const [title, setTitle] = useState('');
